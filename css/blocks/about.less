@@ -1,0 +1,110 @@
+// main: ../style.less
+
+.about {
+    margin: 8.4rem 0;
+	
+	@media @tablet{
+		margin: 4rem 0;
+	}
+}
+
+.about__inner {
+    display: flex;
+    max-width: 1090px;
+	flex-wrap: wrap;
+}
+
+.about__photo,
+.about__content {
+    width: 50%;
+	
+	@media @tablet{
+		width: 100%;
+	}
+}
+
+.about__photo {
+    position: relative;
+	
+    img {
+        position: absolute;
+		z-index: 2;
+		bottom: 0;
+    }
+
+    &:before {
+        content: "";
+        width: 413px;
+        height: 413px;
+        background-color: #EFEFEF;
+        position: absolute;
+        left: 1rem;
+        bottom: 0;
+        z-index: 1;
+    }
+	
+	@media @tablet{
+		display: none;
+	}
+}
+
+.about__content {
+    padding-left: 3.2rem;
+    margin-top: 2rem;
+	
+	@media @tablet {
+		padding-left: 0;
+		text-align: center;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.about__title {
+    font-size: 3rem;
+    color: @black;
+    font-weight: 700;
+    text-transform: uppercase;
+	
+	@media @notebook{
+		font-size: 2.5rem;
+	}
+	
+	@media @mobile {
+		font-size: 2rem;
+	}
+}
+
+.about__bigtitle {
+    margin-bottom: 1.4rem;
+    position: relative;
+    left: -10px;
+
+    font-size: 6.1rem;
+    line-height: 1.1;
+    color: fade(@black, 15%);
+    font-weight: 700;
+    text-transform: uppercase;
+	
+	@media @notebook{
+		font-size: 4rem;
+	}
+	
+	@media @mobile {
+		font-size: 3rem;
+	}
+	
+	@media @tablet {
+		position: static;
+	}
+}
+
+.about__text {
+    margin-bottom: 2.8rem;
+
+    font-size: .8rem;
+    line-height: 2;
+    color: @gray;
+    font-weight: 300;
+}
